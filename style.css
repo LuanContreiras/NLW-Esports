@@ -88,7 +88,7 @@ section ul {
 }
 
 section ul li{
-  transition: transform 0.2s;
+  transition: transform 0.3s;
 }
 
 section ul li:hover{
@@ -98,6 +98,27 @@ section ul li:hover{
 .games-list img {
   width: 100px;
   border-radius: 8px;
+}
+
+.hovering:before{
+  content: '';
+  display: block;
+  background-color: #9147ff;
+  width: 100%;
+  height: 95%;
+  position: absolute;
+  transition: all .3s ease;
+  z-index: -1;
+}
+
+.hovering:before{
+  transform-origin: center left;
+  transform: scale(0);
+}
+
+.hovering:hover:before{
+  transform:  scale(1) translate(-4px, 4px);
+  border-radius: 10px 0 10px 10px;
 }
 
 .channel-list img {
